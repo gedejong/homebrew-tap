@@ -1,25 +1,25 @@
 class MtrNg < Formula
   desc "A modern, feature-rich implementation of My Traceroute (MTR) with real-time network path visualization"
   homepage "https://github.com/gedejong/mtr-ng"
-  version "0.5.0"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.5.0/mtr-ng-aarch64-apple-darwin.tar.xz"
-      sha256 "e07dfdc845004423e8bb3aea5b60e51f0824200a4f8c19c6c18dc4c46bc5f28e"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.0/mtr-ng-aarch64-apple-darwin.tar.xz"
+      sha256 "a8dbbf1854b711d6272678c24712a63ff7784c684d0a26ac2e669a6028874758"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.5.0/mtr-ng-x86_64-apple-darwin.tar.xz"
-      sha256 "247699a563aade106d469c5802f9ca231acac92566f759216cfdd6919d39d8d9"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.0/mtr-ng-x86_64-apple-darwin.tar.xz"
+      sha256 "84c4c520115b34d3f02dff86ce9ebe4655c4d31f6bc1d56b4b52641251448e3f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.5.0/mtr-ng-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b0fc3ef16886915851f95a07d91c5e8dddc3d7dc5cf0b9aa4584f4883464bcb6"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.0/mtr-ng-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b60864747fb5deb876c079c168cb982b5d053e04b670032b8c4966d2eef0b181"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.5.0/mtr-ng-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1417ce6ba282ec699b96c2faaf0df734f96e458cd7b2b5881097c31b4a003dd8"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.0/mtr-ng-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c0e14362876e60556f597a59220272d78944c72008b6f4d1f3cae5ade22cb9f7"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -63,6 +63,9 @@ class MtrNg < Formula
     end
 
     man1.install "mtr-ng.1"
+    bash_completion.install "mtr-ng.bash" => "mtr-ng"
+    zsh_completion.install "_mtr-ng"
+    fish_completion.install "mtr-ng.fish"
     install_binary_aliases!
 
     # Homebrew will automatically install these, so we don't need to do that
