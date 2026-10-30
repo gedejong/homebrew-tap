@@ -1,25 +1,25 @@
 class MtrNg < Formula
   desc "A modern, feature-rich implementation of My Traceroute (MTR) with real-time network path visualization"
   homepage "https://github.com/gedejong/mtr-ng"
-  version "0.6.1"
+  version "0.6.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.1/mtr-ng-aarch64-apple-darwin.tar.xz"
-      sha256 "5ff49eb3c39671a7096e194a43d48882899838be3740d14e3f97c99aaa9c7cd6"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.2/mtr-ng-aarch64-apple-darwin.tar.xz"
+      sha256 "64242e8c532377743b3276bd741319b6e43d8a738b154d62b6e52833004e8ec5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.1/mtr-ng-x86_64-apple-darwin.tar.xz"
-      sha256 "3535e09519f164a90c36bc184aae74033022984e48c88a19ed372459aaef69ed"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.2/mtr-ng-x86_64-apple-darwin.tar.xz"
+      sha256 "7109d88ac1fb4e0f160085e488b4ef27dcaa5966544ac33c514575e487bdb33f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.1/mtr-ng-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5be367c6478218c00b381a6ab42af2d497c7576b586510db9dc22978e726fd11"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.2/mtr-ng-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "15a15b3f7171079a2b56f18faa580158f41e703272c73ad74fa05fff7aa72e50"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.1/mtr-ng-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e92671b8004d0b082d056d412a7521402026b904f7deabc6b062f508e7f54aeb"
+      url "https://github.com/gedejong/mtr-ng/releases/download/v0.6.2/mtr-ng-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "bde66ed81d2ff61e592e7c0f9acf2c496dc53890951343151fbd091e13b9b562"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
